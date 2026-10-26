@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صرّاف سوريا | عبد القادر أبو عامر</title>
+<style>
+body{margin:0;background:#101827;color:#fff;font-family:Arial,Tahoma,sans-serif;padding:20px}
+main{max-width:650px;margin:auto}
+header{text-align:center;padding:20px 0}
+h1{color:#38bdf8;font-size:30px}
+p{color:#a9bdd3;line-height:1.8}
+.card{background:#1b2a40;border:1px solid #1769aa;border-radius:18px;padding:18px;margin:16px 0}
+h2{font-size:19px;color:#7dd3fc}
+.price{font-size:27px;font-weight:bold;margin:15px 0}
+input,select,button{width:100%;padding:13px;margin-top:10px;border-radius:10px;border:1px solid #476078;box-sizing:border-box;font-size:16px}
+input,select{background:#101827;color:white}
+button{background:#10b981;color:#06281e;font-weight:bold;border:0}
+.note{font-size:13px;color:#facc15}
+footer{text-align:center;color:#9fb0c4;font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>⇄ صرّاف سوريا</h1>
+<p>أسعار الدولار الأمريكي والليرة التركية</p>
+<p>السعر الرسمي والسوق الموازية</p>
+</header>
+
+<div class="card">
+<h2>🇸🇾 الدولار مقابل الليرة السورية الجديدة</h2>
+<p>السعر الرسمي</p>
+<div class="price">غير متصل</div>
+<p>سعر السوق الموازية</p>
+<div class="price">غير متصل</div>
+<p class="note">ستظهر الأسعار بعد ربط مصدر بيانات موثوق.</p>
+</div>
+
+<div class="card">
+<h2>🇹🇷 الدولار مقابل الليرة التركية</h2>
+<div class="price">غير متصل</div>
+<p>لم يتم ربط مصدر الأسعار بعد.</p>
+</div>
+
+<div class="card">
+<h2>حاسبة تحويل العملات</h2>
+<label>المبلغ</label>
+<input id="amount" type="number" min="0" value="100">
+<label>من العملة</label>
+<select id="from">
+<option value="USD">الدولار الأمريكي</option>
+<option value="SYP">الليرة السورية الجديدة</option>
+<option value="TRY">الليرة التركية</option>
+</select>
+<label>إلى العملة</label>
+<select id="to">
+<option value="SYP">الليرة السورية الجديدة</option>
+<option value="TRY">الليرة التركية</option>
+<option value="USD">الدولار الأمريكي</option>
+</select>
+<button onclick="convert()">احسب التحويل</button>
+<p id="result">تحتاج الحاسبة إلى أسعار فعلية لتعمل.</p>
+</div>
+
+<footer>
+تصميم عبد القادر أبو عامر<br>
+نسخة أولية — الأسعار المباشرة ستضاف لاحقاً
+</footer>
+</main>
+<script>
+function convert(){
+document.getElementById('result').textContent=
+'الحاسبة تنتظر ربط أسعار الصرف الحقيقية.';
+}
+</script>
+</body>
+</html>
